@@ -1,0 +1,6 @@
+<h1>Detalhes do Aluno</h1>
+<p><strong>Nome:</strong> <%= @aluno.nome %></p>
+<p><strong>Matrícula:</strong> <%= @aluno.matricula %></p>
+<%= link_to 'Editar', edit_aluno_path(@aluno) %> |
+<%= link_to 'Excluir', aluno_path(@aluno), method: :delete, data: { confirm: 'Tem certeza que deseja excluir este aluno?' } %> |
+<%= link_to 'Voltar', alunos_path %>

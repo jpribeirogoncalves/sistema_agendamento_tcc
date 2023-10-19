@@ -1,0 +1,13 @@
+<%= form_with model: @aluno do |form| %>
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= form.label :matricula %>
+    <%= form.text_field :matricula %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

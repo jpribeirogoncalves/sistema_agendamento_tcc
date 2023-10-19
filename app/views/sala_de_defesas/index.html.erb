@@ -1,0 +1,7 @@
+<h1>Lista de Salas de Defesa</h1>
+<ul>
+  <% @salas_de_defesa.each do |sala_de_defesa| %>
+    <li><%= link_to sala_de_defesa.nome_sala, sala_de_defesa %></li>
+  <% end %>
+</ul>
+<%= link_to 'Nova Sala de Defesa', new_sala_de_defesa_path %>

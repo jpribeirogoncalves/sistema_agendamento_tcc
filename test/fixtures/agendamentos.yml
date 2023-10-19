@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo_agendamento: MyString
+  sala_de_defesa: one
+  aluno: one
+  professor_orientador: one
+  membro_banca_1: one
+  membro_banca_2: one
+  membro_banca_3: one
+  membro_banca_4: one
+
+two:
+  codigo_agendamento: MyString
+  sala_de_defesa: two
+  aluno: two
+  professor_orientador: two
+  membro_banca_1: two
+  membro_banca_2: two
+  membro_banca_3: two
+  membro_banca_4: two

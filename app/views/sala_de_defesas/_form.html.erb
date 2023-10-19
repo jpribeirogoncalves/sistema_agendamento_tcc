@@ -1,0 +1,29 @@
+<%= form_with model: @sala_de_defesa do |form| %>
+  <div class="field">
+    <%= form.label :nome_sala %>
+    <%= form.text_field :nome_sala %>
+  </div>
+  <div class="field">
+    <%= form.label :codigo_sala %>
+    <%= form.text_field :codigo_sala %>
+  </div>
+  <div class="field">
+    <%= form.label :local %>
+    <%= form.text_field :local %>
+  </div>
+  <div class="field">
+    <%= form.label :horario_inicio %>
+    <%= form.datetime_field :horario_inicio %>
+  </div>
+  <div class="field">
+    <%= form.label :horario_termino %>
+    <%= form.datetime_field :horario_termino %>
+  </div>
+  <div class="field">
+    <%= form.label :reservado %>
+    <%= form.check_box :reservado %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

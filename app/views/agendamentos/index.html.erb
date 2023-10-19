@@ -1,0 +1,7 @@
+<h1>Lista de Agendamentos</h1>
+<ul>
+  <% @agendamentos.each do |agendamento| %>
+    <li><%= link_to "Agendamento ##{agendamento.codigo_agendamento}", agendamento %></li>
+  <% end %>
+</ul>
+<%= link_to 'Novo Agendamento', new_agendamento_path %>

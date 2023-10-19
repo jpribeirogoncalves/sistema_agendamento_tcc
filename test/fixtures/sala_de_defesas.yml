@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo_sala: MyString
+  nome_sala: MyString
+  local: MyString
+  horario_inicio: 2023-10-18 23:09:02
+  horario_termino: 2023-10-18 23:09:02
+  reservado: false
+
+two:
+  codigo_sala: MyString
+  nome_sala: MyString
+  local: MyString
+  horario_inicio: 2023-10-18 23:09:02
+  horario_termino: 2023-10-18 23:09:02
+  reservado: false
