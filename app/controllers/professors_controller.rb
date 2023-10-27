@@ -1,6 +1,6 @@
-class ProfessoresController < ApplicationController
+class ProfessorsController < ApplicationController
     def index
-      @professores = Professor.all
+      @professors = Professor.all
     end
   
     def show
@@ -14,7 +14,7 @@ class ProfessoresController < ApplicationController
     def create
       @professor = Professor.new(professor_params)
       if @professor.save
-        redirect_to professores_path, notice: 'Professor cadastrado com sucesso.'
+        redirect_to professors_path, notice: 'Professor cadastrado com sucesso.'
       else
         render 'new'
       end
@@ -27,7 +27,7 @@ class ProfessoresController < ApplicationController
     def update
       @professor = Professor.find(params[:id])
       if @professor.update(professor_params)
-        redirect_to professores_path, notice: 'Professor atualizado com sucesso.'
+        redirect_to professors_path, notice: 'Professor atualizado com sucesso.'
       else
         render 'edit'
       end
@@ -36,7 +36,7 @@ class ProfessoresController < ApplicationController
     def destroy
       @professor = Professor.find(params[:id])
       @professor.destroy
-      redirect_to professores_path, notice: 'Professor excluído com sucesso.'
+      redirect_to professors_path, notice: 'Professor excluído com sucesso.'
     end
   
     private

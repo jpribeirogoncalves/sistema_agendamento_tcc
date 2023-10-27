@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   # root "posts#index"
 
     # Rotas para o Controlador de Professor
-    resources :professores
-  
+    resources :professors 
+
     # Rotas para o Controlador de Aluno
     resources :alunos
   
