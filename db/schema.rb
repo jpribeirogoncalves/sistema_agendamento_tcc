@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_19_020910) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_12_200841) do
   create_table "agendamentos", force: :cascade do |t|
     t.string "codigo_agendamento"
     t.integer "sala_de_defesa_id", null: false
@@ -59,10 +59,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_19_020910) do
   end
 
   add_foreign_key "agendamentos", "alunos"
-  add_foreign_key "agendamentos", "membro_banca_1s"
-  add_foreign_key "agendamentos", "membro_banca_2s"
-  add_foreign_key "agendamentos", "membro_banca_3s"
-  add_foreign_key "agendamentos", "membro_banca_4s"
-  add_foreign_key "agendamentos", "professor_orientadors"
-  add_foreign_key "agendamentos", "sala_de_defesas"
+  add_foreign_key "agendamentos", "professors", column: "membro_banca_1_id"
+  add_foreign_key "agendamentos", "professors", column: "membro_banca_2_id"
+  add_foreign_key "agendamentos", "professors", column: "membro_banca_3_id"
+  add_foreign_key "agendamentos", "professors", column: "membro_banca_4_id"
 end
