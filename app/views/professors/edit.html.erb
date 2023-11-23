@@ -1,3 +1,18 @@
-<h1>Editar Professor</h1>
-<%= render 'form' %>
-<%= link_to 'Voltar', professor_path(@professor) %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editar Professor</title>
+  <%= stylesheet_link_tag 'edit', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
+
+<div class="container">
+  <h1 class="page-title">Editar Professor</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Voltar', professor_path(@professor), class: 'btn' %>
+</div>
+
+</body>
+</html>

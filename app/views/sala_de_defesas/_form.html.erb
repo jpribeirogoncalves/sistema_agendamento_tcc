@@ -1,29 +1,29 @@
-<%= form_with model: @sala_de_defesa do |form| %>
+<%= form_with model: @sala_de_defesa, html: { class: 'custom-form' } do |form| %>
   <div class="field">
-    <%= form.label :nome_sala %>
-    <%= form.text_field :nome_sala %>
+    <%= form.label :nome_sala, class: 'form-label' %>
+    <%= form.text_field :nome_sala, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= form.label :codigo_sala %>
-    <%= form.text_field :codigo_sala %>
+    <%= form.label :codigo_sala, class: 'form-label' %>
+    <%= form.text_field :codigo_sala, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= form.label :local %>
-    <%= form.text_field :local %>
+    <%= form.label :local, class: 'form-label' %>
+    <%= form.text_field :local, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= form.label :horario_inicio %>
-    <%= form.datetime_field :horario_inicio %>
+    <%= form.label :horario_inicio, class: 'form-label' %>
+    <%= form.datetime_field :horario_inicio, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= form.label :horario_termino %>
-    <%= form.datetime_field :horario_termino %>
+    <%= form.label :horario_termino, class: 'form-label' %>
+    <%= form.datetime_field :horario_termino, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= form.label :reservado %>
-    <%= form.check_box :reservado %>
+    <%= form.label :reservado, class: 'form-label' %>
+    <%= form.check_box :reservado, class: 'form-checkbox' %>
   </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Enviar', class: 'btn btn-primary' %>
   </div>
 <% end %>

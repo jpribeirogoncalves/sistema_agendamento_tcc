@@ -1,0 +1,53 @@
+/* Estilos para classes */
+
+.main-heading {
+    font-size: 2em; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-align: center; /* Alinhamento do texto */
+  }
+  
+  .main-nav {
+    text-align: center; /* Alinhamento do menu */
+  }
+  
+  .nav-list {
+    list-style: none; /* Remover marcadores de lista */
+    display: flex; /* Exibir itens em linha */
+    justify-content: center; /* Alinhamento no centro */
+  }
+  
+  .nav-item {
+    margin: 0 10px; /* Espaçamento entre os itens */
+  }
+  
+  .nav-link {
+    text-decoration: none; /* Remover sublinhado dos links */
+    color: #007bff; /* Cor dos links */
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline; /* Sublinhar ao passar o mouse */
+    color: #0056b3; /* Cor ao passar o mouse */
+  }
+  
+
+  /* Estilos para classes */
+
+/* Botão estilizado */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none !important;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0766cb;
+    color: #fff;
+  }
+  

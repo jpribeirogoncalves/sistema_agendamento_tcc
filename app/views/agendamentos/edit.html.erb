@@ -1,3 +1,18 @@
-<h1>Editar Agendamento</h1>
-<%= render 'form' %>
-<%= link_to 'Voltar', agendamento_path(@agendamento) %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editar Agendamento</title>
+  <%= stylesheet_link_tag 'edit', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
+
+<div class="container">
+  <h1 class="page-title">Editar Agendamento</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Voltar', agendamento_path(@agendamento), class: 'btn' %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* Estilos para classes */
+
+/* Estilização da página */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Título da página */
+  .page-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilização dos botões */
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none !important;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0766cb;
+    color: #fff;
+  }
+  

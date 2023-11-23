@@ -1,3 +1,18 @@
-<h1>Editar Aluno</h1>
-<%= render 'form' %>
-<%= link_to 'Voltar', aluno_path(@aluno) %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editar Aluno</title>
+  <%= stylesheet_link_tag 'edit', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
+
+<div class="container">
+  <h1 class="page-title">Editar Aluno</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Voltar', aluno_path(@aluno), class: 'btn' %>
+</div>
+
+</body>
+</html>

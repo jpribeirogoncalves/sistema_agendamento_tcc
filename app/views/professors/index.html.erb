@@ -1,8 +1,23 @@
-<h1>Lista de Professores</h1>
-<ul>
-  <% @professors.each do |professor| %>
-    <li><%= link_to professor.nome, professor %></li>
-  <% end %>
-</ul>
-<%= link_to 'Novo Professor', new_professor_path %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Professores</title>
+  <%= stylesheet_link_tag 'home_pag', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
 
+<div class="container">
+  <h1 class="page-title">Lista de Professores</h1>
+
+  <ul class="list">
+    <% @professors.each do |professor| %>
+      <li><%= link_to professor.nome, professor, class: 'link' %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Novo Professor', new_professor_path, class: 'btn' %>
+  <%= link_to 'Voltar', welcome_path, class: 'btn' %>
+</div>
+
+</body>
+</html>

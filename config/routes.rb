@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   
     # Rotas para o Controlador de Agendamento
     resources :agendamentos
+
+    get 'welcome', to: 'welcome#index'
   
     root 'welcome#index' # Defina uma página inicial se desejar
 

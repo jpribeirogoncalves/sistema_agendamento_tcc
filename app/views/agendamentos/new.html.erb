@@ -1,3 +1,18 @@
-<h1>Novo Agendamento</h1>
-<%= render 'form' %>
-<%= link_to 'Voltar', agendamentos_path %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Novo Agendamento</title>
+  <%= stylesheet_link_tag 'new', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
+
+<div class="container">
+  <h1 class="page-title">Novo Agendamento</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Voltar', agendamentos_path, class: 'btn' %>
+</div>
+
+</body>
+</html>

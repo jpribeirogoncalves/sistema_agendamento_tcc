@@ -1,13 +1,13 @@
-<%= form_with model: @aluno do |form| %>
+<%= form_with model: @aluno, html: { class: 'custom-form' } do |form| %>
   <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <%= form.label :nome, class: 'form-label' %>
+    <%= form.text_field :nome, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= form.label :matricula %>
-    <%= form.text_field :matricula %>
+    <%= form.label :matricula, class: 'form-label' %>
+    <%= form.text_field :matricula, class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Enviar', class: 'btn btn-primary' %>
   </div>
 <% end %>

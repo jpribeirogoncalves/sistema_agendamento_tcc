@@ -1,11 +1,21 @@
-<!-- app/views/welcome/index.html.erb -->
-<h1>Bem-vindo ao Sistema de TCC - Univiçosa</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistema de TCC - Univiçosa</title>
+  <%= stylesheet_link_tag 'home', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
 
-<nav>
-  <ul>
-    <li><%= link_to 'Professores', professors_path %></li>
-    <li><%= link_to 'Alunos', alunos_path %></li>
-    <li><%= link_to 'Salas de Defesa', sala_de_defesas_path %></li>
-    <li><%= link_to 'Agendamentos de Defesa', agendamentos_path %></li>
+<h1 class="main-heading">Bem-vindo ao Sistema de Agendamento para Banca do TCC - Univiçosa</h1>
+
+<nav class="main-nav">
+  <ul class="nav-list">
+    <li class="nav-item"><%= link_to 'Professores', professors_path, class: 'nav-link btn' %></li>
+    <li class="nav-item"><%= link_to 'Alunos', alunos_path, class: 'nav-link btn' %></li>
+    <li class="nav-item"><%= link_to 'Salas de Defesa', sala_de_defesas_path, class: 'nav-link btn' %></li>
+    <li class="nav-item"><%= link_to 'Agendamentos de Defesa', agendamentos_path, class: 'nav-link btn' %></li>
   </ul>
 </nav>
+
+</body>
+</html>

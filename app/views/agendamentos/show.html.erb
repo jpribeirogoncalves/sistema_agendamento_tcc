@@ -1,12 +1,29 @@
-<h1>Detalhes do Agendamento</h1>
-<p><strong>Código do Agendamento:</strong> <%= @agendamento.codigo_agendamento %></p>
-<p><strong>Sala de Defesa:</strong> <%= @agendamento.sala_de_defesa.nome_sala %></p>
-<p><strong>Aluno:</strong> <%= @agendamento.aluno.nome %></p>
-<p><strong>Professor Orientador:</strong> <%= @agendamento.professor_orientador.nome %></p>
-<p><strong>Membro da Banca 1:</strong> <%= @agendamento.membro_banca_1.nome %></p>
-<p><strong>Membro da Banca 2:</strong> <%= @agendamento.membro_banca_2.nome %></p>
-<p><strong>Membro da Banca 3:</strong> <%= @agendamento.membro_banca_3.nome %></p>
-<p><strong>Membro da Banca 4:</strong> <%= @agendamento.membro_banca_4.nome %></p>
-<%= link_to 'Editar', edit_agendamento_path(@agendamento) %> |
-<%= link_to 'Excluir', agendamento_path(@agendamento), method: :delete, data: { confirm: 'Tem certeza que deseja excluir este agendamento?' } %> |
-<%= link_to 'Voltar', agendamentos_path %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detalhes do Agendamento</title>
+  <%= stylesheet_link_tag 'show', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
+
+<div class="container">
+  <h1 class="page-title">Detalhes do Agendamento</h1>
+
+  <p><strong>Código do Agendamento:</strong> <%= @agendamento.codigo_agendamento %></p>
+  <p><strong>Sala de Defesa:</strong> <%= @agendamento.sala_de_defesa.nome_sala %></p>
+  <p><strong>Aluno:</strong> <%= @agendamento.aluno.nome %></p>
+  <p><strong>Professor Orientador:</strong> <%= @agendamento.professor_orientador.nome %></p>
+  <p><strong>Membro da Banca 1:</strong> <%= @agendamento.membro_banca_1.nome %></p>
+  <p><strong>Membro da Banca 2:</strong> <%= @agendamento.membro_banca_2.nome %></p>
+  <p><strong>Membro da Banca 3:</strong> <%= @agendamento.membro_banca_3.nome %></p>
+  <p><strong>Membro da Banca 4:</strong> <%= @agendamento.membro_banca_4.nome %></p>
+
+  <div class="actions">
+    <%= link_to 'Editar', edit_agendamento_path(@agendamento), class: 'btn-show' %>
+    <%= link_to 'Excluir', agendamento_path(@agendamento), method: :delete, data: { confirm: 'Tem certeza que deseja excluir este agendamento?' }, class: 'btn-show delete-btn', style: 'color: red;' %>
+    <%= link_to 'Voltar', agendamentos_path, class: 'btn-show' %>
+  </div>
+</div>
+
+</body>
+</html>

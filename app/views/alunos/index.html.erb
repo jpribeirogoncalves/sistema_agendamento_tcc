@@ -1,7 +1,23 @@
-<h1>Lista de Alunos</h1>
-<ul>
-  <% @alunos.each do |aluno| %>
-    <li><%= link_to aluno.nome, aluno %></li>
-  <% end %>
-</ul>
-<%= link_to 'Novo Aluno', new_aluno_path %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Alunos</title>
+  <%= stylesheet_link_tag 'home_pag', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
+
+<div class="container">
+  <h1 class="page-title">Lista de Alunos</h1>
+
+  <ul class="list">
+    <% @alunos.each do |aluno| %>
+      <li><%= link_to aluno.nome, aluno, class: 'link' %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Novo Aluno', new_aluno_path, class: 'btn' %>
+  <%= link_to 'Voltar', welcome_path, class: 'btn' %>
+</div>
+
+</body>
+</html>

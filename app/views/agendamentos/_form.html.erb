@@ -1,37 +1,45 @@
-<%= form_with model: @agendamento do |form| %>
+<%= form_with model: @agendamento, html: { class: 'custom-form' } do |form| %>
   <div class="field">
     <%= form.label :codigo_agendamento %>
-    <%= form.text_field :codigo_agendamento %>
+    <%= form.text_field :codigo_agendamento, class: 'form-control' %>
   </div>
+  
   <div class="field">
     <%= form.label :sala_de_defesa_id %>
-    <%= form.collection_select :sala_de_defesa_id, SalaDeDefesa.all, :id, :nome_sala %>
+    <%= form.collection_select :sala_de_defesa_id, SalaDeDefesa.all, :id, :nome_sala, {}, { class: 'form-control' } %>
   </div>
+  
   <div class="field">
     <%= form.label :aluno_id %>
-    <%= form.collection_select :aluno_id, Aluno.all, :id, :nome %>
+    <%= form.collection_select :aluno_id, Aluno.all, :id, :nome, {}, { class: 'form-control' } %>
   </div>
+  
   <div class="field">
     <%= form.label :professor_orientador_id %>
-    <%= form.collection_select :professor_orientador_id, Professor.all, :id, :nome %>
+    <%= form.collection_select :professor_orientador_id, Professor.all, :id, :nome, {}, { class: 'form-control' } %>
   </div>
+  
   <div class="field">
     <%= form.label :membro_banca_1_id %>
-    <%= form.collection_select :membro_banca_1_id, Professor.all, :id, :nome %>
+    <%= form.collection_select :membro_banca_1_id, Professor.all, :id, :nome, {}, { class: 'form-control' } %>
   </div>
+  
   <div class="field">
     <%= form.label :membro_banca_2_id %>
-    <%= form.collection_select :membro_banca_2_id, Professor.all, :id, :nome %>
+    <%= form.collection_select :membro_banca_2_id, Professor.all, :id, :nome, {}, { class: 'form-control' } %>
   </div>
+  
   <div class="field">
     <%= form.label :membro_banca_3_id %>
-    <%= form.collection_select :membro_banca_3_id, Professor.all, :id, :nome %>
+    <%= form.collection_select :membro_banca_3_id, Professor.all, :id, :nome, {}, { class: 'form-control' } %>
   </div>
+  
   <div class="field">
     <%= form.label :membro_banca_4_id %>
-    <%= form.collection_select :membro_banca_4_id, Professor.all, :id, :nome %>
+    <%= form.collection_select :membro_banca_4_id, Professor.all, :id, :nome, {}, { class: 'form-control' } %>
   </div>
+  
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Enviar', class: 'btn btn-primary' %>
   </div>
 <% end %>

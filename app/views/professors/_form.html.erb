@@ -1,21 +1,21 @@
-<%= form_with model: @professor do |form| %>
+<%= form_with model: @professor, html: { class: 'custom-form' } do |form| %>
   <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <%= form.label :nome, class: 'form-label' %>
+    <%= form.text_field :nome, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= form.label :cpf %>
-    <%= form.text_field :cpf %>
+    <%= form.label :cpf, class: 'form-label' %>
+    <%= form.text_field :cpf, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= form.label :instituicao %>
-    <%= form.text_field :instituicao %>
+    <%= form.label :instituicao, class: 'form-label' %>
+    <%= form.text_field :instituicao, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= form.label :externo %>
-    <%= form.check_box :externo %>
+    <%= form.label :externo, class: 'form-label' %>
+    <%= form.check_box :externo, class: 'form-checkbox' %>
   </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Enviar', class: 'btn btn-primary' %>
   </div>
 <% end %>

@@ -1,3 +1,18 @@
-<h1>Nova Sala de Defesa</h1>
-<%= render 'form' %>
-<%= link_to 'Voltar', sala_de_defesas_path %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nova Sala de Defesa</title>
+  <%= stylesheet_link_tag 'new', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
+
+<div class="container">
+  <h1 class="page-title">Nova Sala de Defesa</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Voltar', sala_de_defesas_path, class: 'btn' %>
+</div>
+
+</body>
+</html>

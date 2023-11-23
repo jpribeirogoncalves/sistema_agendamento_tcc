@@ -1,10 +1,27 @@
-<h1>Detalhes da Sala de Defesa</h1>
-<p><strong>Nome da Sala:</strong> <%= @sala_de_defesa.nome_sala %></p>
-<p><strong>Código da Sala:</strong> <%= @sala_de_defesa.codigo_sala %></p>
-<p><strong>Local:</strong> <%= @sala_de_defesa.local %></p>
-<p><strong>Horário de Início:</strong> <%= @sala_de_defesa.horario_inicio %></p>
-<p><strong>Horário de Término:</strong> <%= @sala_de_defesa.horario_termino %></p>
-<p><strong>Reservado:</strong> <%= @sala_de_defesa.reservado ? 'Sim' : 'Não' %></p>
-<%= link_to 'Editar', edit_sala_de_defesa_path(@sala_de_defesa) %> |
-<%= link_to 'Excluir', sala_de_defesa_path(@sala_de_defesa), method: :delete, data: { confirm: 'Tem certeza que deseja excluir esta sala de defesa?' } %> |
-<%= link_to 'Voltar', sala_de_defesas_path %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detalhes da Sala de Defesa</title>
+  <%= stylesheet_link_tag 'show', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
+
+<div class="container">
+  <h1 class="page-title">Detalhes da Sala de Defesa</h1>
+
+  <p><strong>Nome da Sala:</strong> <%= @sala_de_defesa.nome_sala %></p>
+  <p><strong>Código da Sala:</strong> <%= @sala_de_defesa.codigo_sala %></p>
+  <p><strong>Local:</strong> <%= @sala_de_defesa.local %></p>
+  <p><strong>Horário de Início:</strong> <%= @sala_de_defesa.horario_inicio %></p>
+  <p><strong>Horário de Término:</strong> <%= @sala_de_defesa.horario_termino %></p>
+  <p><strong>Reservado:</strong> <%= @sala_de_defesa.reservado ? 'Sim' : 'Não' %></p>
+
+  <div class="actions">
+    <%= link_to 'Editar', edit_sala_de_defesa_path(@sala_de_defesa), class: 'btn-show' %>
+    <%= link_to 'Excluir', sala_de_defesa_path(@sala_de_defesa), method: :delete, data: { confirm: 'Tem certeza que deseja excluir esta sala de defesa?' }, class: 'btn-show delete-btn', style: 'color: red;' %>
+    <%= link_to 'Voltar', sala_de_defesas_path, class: 'btn-show' %>
+  </div>
+</div>
+
+</body>
+</html>

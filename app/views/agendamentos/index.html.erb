@@ -1,7 +1,24 @@
-<h1>Lista de Agendamentos</h1>
-<ul>
-  <% @agendamentos.each do |agendamento| %>
-    <li><%= link_to "Agendamento ##{agendamento.codigo_agendamento}", agendamento %></li>
-  <% end %>
-</ul>
-<%= link_to 'Novo Agendamento', new_agendamento_path %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Agendamentos</title>
+  <%= stylesheet_link_tag 'home_pag', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
+
+<div class="container">
+  <h1 class="page-title">Lista de Agendamentos</h1>
+
+  <ul class="list">
+    <% @agendamentos.each do |agendamento| %>
+      <li><%= link_to "Agendamento ##{agendamento.codigo_agendamento}", agendamento, class: 'link' %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Novo Agendamento', new_agendamento_path, class: 'btn' %>
+  <%= link_to 'Voltar', welcome_path, class: 'btn' %>
+</div>
+
+</body>
+</html>
+

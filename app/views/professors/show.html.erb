@@ -1,8 +1,25 @@
-<h1>Detalhes do Professor</h1>
-<p><strong>Nome:</strong> <%= @professor.nome %></p>
-<p><strong>CPF:</strong> <%= @professor.cpf %></p>
-<p><strong>Instituição:</strong> <%= @professor.instituicao %></p>
-<p><strong>Externo:</strong> <%= @professor.externo ? 'Sim' : 'Não' %></p>
-<%= link_to 'Editar', edit_professor_path(@professor) %> |
-<%= link_to 'Excluir', professor_path(@professor), method: :delete, data: { confirm: 'Tem certeza que deseja excluir este professor?' } %> |
-<%= link_to 'Voltar', professors_path %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detalhes do Professor</title>
+  <%= stylesheet_link_tag 'show', media: 'all' %> <!-- Referenciando o arquivo de estilos -->
+</head>
+<body>
+
+<div class="container">
+  <h1 class="page-title">Detalhes do Professor</h1>
+
+  <p><strong>Nome:</strong> <%= @professor.nome %></p>
+  <p><strong>CPF:</strong> <%= @professor.cpf %></p>
+  <p><strong>Instituição:</strong> <%= @professor.instituicao %></p>
+  <p><strong>Externo:</strong> <%= @professor.externo ? 'Sim' : 'Não' %></p>
+
+  <div class="actions">
+    <%= link_to 'Editar', edit_professor_path(@professor), class: 'btn-show' %>
+    <%= link_to 'Excluir', professor_path(@professor), method: :delete, data: { confirm: 'Tem certeza que deseja excluir este professor?' }, class: 'btn-show delete-btn', style: 'color: red;' %>
+    <%= link_to 'Voltar', professors_path, class: 'btn-show' %>
+  </div>
+</div>
+
+</body>
+</html>
