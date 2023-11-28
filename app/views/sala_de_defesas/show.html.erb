@@ -18,7 +18,7 @@
 
   <div class="actions">
     <%= link_to 'Editar', edit_sala_de_defesa_path(@sala_de_defesa), class: 'btn-show' %>
-    <%= link_to 'Excluir', sala_de_defesa_path(@sala_de_defesa), method: :delete, data: { confirm: 'Tem certeza que deseja excluir esta sala de defesa?' }, class: 'btn-show delete-btn', style: 'color: red;' %>
+    <%= button_to 'Excluir', sala_de_defesa_path(@sala_de_defesa), method: :delete, form: { data: { turbo_confirm: 'Tem certeza que deseja excluir esta sala de defesa?' } }, class: 'btn-show delete-btn', style: 'color: red;' %>
     <%= link_to 'Voltar', sala_de_defesas_path, class: 'btn-show' %>
   </div>
 </div>
