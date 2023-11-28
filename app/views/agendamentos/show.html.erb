@@ -20,7 +20,7 @@
 
   <div class="actions">
     <%= link_to 'Editar', edit_agendamento_path(@agendamento), class: 'btn-show' %>
-    <%= link_to 'Excluir', agendamento_path(@agendamento), method: :delete, data: { confirm: 'Tem certeza que deseja excluir este agendamento?' }, class: 'btn-show delete-btn', style: 'color: red;' %>
+    <%= button_to 'Excluir', agendamento_path(@agendamento), method: :delete, form: { data: { turbo_confirm: 'Tem certeza que deseja excluir este agendamento?' } }, class: 'btn-show delete-btn', style: 'color: red;' %>
     <%= link_to 'Voltar', agendamentos_path, class: 'btn-show' %>
   </div>
 </div>
