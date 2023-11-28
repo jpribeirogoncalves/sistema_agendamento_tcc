@@ -14,7 +14,7 @@
 
   <div class="actions">
     <%= link_to 'Editar', edit_aluno_path(@aluno), class: 'btn-show' %>
-    <%= link_to 'Excluir', aluno_path(@aluno), method: :delete, data: { confirm: 'Tem certeza que deseja excluir este aluno?' }, class: 'btn-show delete-btn', style: 'color: red;' %>
+    <%= button_to 'Excluir', aluno_path(@aluno), method: :delete, form: { data: { turbo_confirm: 'Tem certeza que deseja excluir este aluno?' }  }, class: 'btn-show delete-btn', style: 'color: red;' %>
     <%= link_to 'Voltar', alunos_path, class: 'btn-show' %>
   </div>
 </div>
